@@ -1,4 +1,4 @@
-### Programa de Análisis Numérico
+## Proyecto base de Métodos Numéricos
 
 Este proyecto servirá como base para el desarrollo del proyecto final del curso de Métodos Numéricos para la carrera de Ingeniería Eléctrica de la ESIME Zacatenco.
 
@@ -29,7 +29,7 @@ El proyecto está escrito en *ANSI C*, y se utilizó el *IDE Code::Blocks* para 
 
 El proyecto usa dos herramietas de codigo abierto para la graficación y el analisis de expresiones matemáticas:
 
-####Gnuplot
+### Gnuplot
 <img style="float: right;" src="http://www.gnuplot.info/figs/gaussians.png">
 
 [Gnuplot](http://www.gnuplot.info) es una utilidad gráfica de línea de comandos portátil para Linux, OS/2, MS Windows, OSX, VMS y muchas otras plataformas. El código fuente está protegido por derechos de autor pero se distribuye libremente (es decir, no tiene que pagar por él). Originalmente se creó para permitir que los científicos y los estudiantes visualicen funciones matemáticas y datos de forma interactiva, pero ha crecido para admitir muchos usos no interactivos, como las secuencias de comandos web. También se utiliza como motor de graficación por aplicaciones de terceros como Octave. Gnuplot ha recibido apoyo y está en desarrollo activo desde 1986.
@@ -43,7 +43,7 @@ Gnuplot admite muchos tipos diferentes de salida
 
 Formatos de visualización web que se pueden usar con el mouse: 		HTML5, svg
 
-#### Tinyexpr
+### Tinyexpr
 <img style="float: right;" src="https://codeplea.com/public/content/tinyexpr_logo.png">
 
 [Tinyexpr](https://github.com/codeplea/tinyexpr) es un pequeño motor de evaluación recursivo descendente y analizador de expresiones matemáticas. Es útil cuando desea agregar la capacidad de evaluar expresiones matemáticas en tiempo de ejecución sin complicar su proyecto.
