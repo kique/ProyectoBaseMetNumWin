@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1615480892 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\analizador.c
+	"cabecera.h"
+
+1615487337 c:\users\emrol\documents\desarrollo\proyectometnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1614830608 c:\users\emrol\documents\desarrollo\proyectometnumwin\tinyexpr.h
+
+1615494136 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\grafica.c
+	"cabecera.h"
+
+1615494011 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\main.c
+	"cabecera.h"
+
+1615493051 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\menus.c
+	"cabecera.h"
+
+1615495408 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\raices.c
+	"cabecera.h"
+
+1615487337 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615494943 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\tabula.c
+	"cabecera.h"
+
+1615443819 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\arreglos.c
+	"cabecera.h"
+
+1615510977 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\analizador.c
+	"cabecera.h"
+
+1615506103 c:\users\kique\desktop\release_proymetnum\release_proymetnum\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1614830608 c:\users\kique\desktop\release_proymetnum\release_proymetnum\tinyexpr.h
+
+1615443819 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\arreglos.c
+	"cabecera.h"
+
+1615506158 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\grafica.c
+	"cabecera.h"
+
+1615494011 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\main.c
+	"cabecera.h"
+
+1615505362 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\menus.c
+	"cabecera.h"
+
+1615510892 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\raices.c
+	"cabecera.h"
+
+1615494943 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\tabula.c
+	"cabecera.h"
+
+1615487337 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
