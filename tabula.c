@@ -13,14 +13,14 @@ void maneja_tabulacion(void)
 {
     double xa,xb,inc;
     int length,c,archivo;
-    char expresion[30];
+    char expresion[100];
 
     printf("\nTabulacion de una Funcion\n\n");
 
     while ((c = getchar()) != '\n' && c != EOF);
 
     printf("\nIngrese la ecuacion f(x)= ");
-    fgets(expresion,30,stdin);
+    fgets(expresion,100,stdin);
 
     length = strlen(expresion);
 
