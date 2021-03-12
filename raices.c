@@ -11,7 +11,7 @@
 
 void LeeDatos_Biseccion(void)
 {
-    char expre[30]; /// *expr  apuntador a la cadena que contendra la expresion matematica
+    char expre[100]; /// *expr  apuntador a la cadena que contendra la expresion matematica
     int err;    /// err    variable que indica si ubo error en la expresion leida
     int cifras; /// cifras Numero de cifras significatovas
     int maxit;  /// maxit  Numero maximo de iteraciones
@@ -26,7 +26,7 @@ void LeeDatos_Biseccion(void)
         while ((c = getchar()) != '\n' && c != EOF);
 
         printf("\nIngrese la ecuacion f(x)= ");
-        fgets(expre,30,stdin);
+        fgets(expre,50,stdin);
 
         length = strlen(expre);
 
