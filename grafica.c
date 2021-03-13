@@ -10,38 +10,39 @@
  *
  */
 
-void crea_grafica(void)
+void Crea_grafica()
 {
-    struct GrafDat dt; /*Se declara un estructura tipo GrafDat */
-
-    int resp;
+    struct GrafDat dt;                  /*Se declara un estructura tipo GrafDat */
+    int resp = 4;
 
     do
     {
-        menu_graficacion(); /* Imprime el menu de graficacion */
-        printf("\n\nSeleccione una opcion: ");
+        Menu_graficacion(resp);         /* Imprime el menu de graficacion */
+        printf("\n        Seleccione una Opcion: ");
         scanf("%d",&resp);
 
         switch(resp)
         {
         case 1:
-            dt.tipo_gra='f'; /* se establece graficar una funcion*/
-            maneja_graficacion(&dt); /* Se llama a la funcion manejadora enviando
-                                        la direccion de la estructura dt*/
+            dt.tipo_gra='f';            /* se establece graficar una funcion*/
+            Maneja_graficacion(&dt);    /* Se llama a la funcion manejadora enviando*/
+            resp = 4;                   /* la direccion de la estructura dt*/
             break;
         case 2:
-            dt.tipo_gra='p'; /* se establece graficar datos de un archivo*/
-            maneja_graficacion(&dt); /* Se llama a la funcion manejadora enviando
-                                        la direccion de la estructura dt*/
+            dt.tipo_gra='p';            /* se establece graficar datos de un archivo*/
+            Maneja_graficacion(&dt);    /* Se llama a la funcion manejadora enviando*/
+            resp = 4;                   /* la direccion de la estructura dt*/
+            break;
+        case 3:
+            dt.tipo_gra='a';            /* se establece graficar datos de un archivo*/
+            Maneja_graficacion(&dt);    /* Se llama a la funcion manejadora enviando*/
+            resp = 4;                   /* la direccion de la estructura dt*/
             break;
         case 0:
-            menu_main();
-
             break;
         default:
-            printf("\nOpcion Incorrecta!");
+            resp = -1;
         }
-
     }
     while(resp != 0);
 }
@@ -54,41 +55,60 @@ void crea_grafica(void)
  *
  */
 
-void maneja_graficacion(struct GrafDat *dtgraf)
+void Maneja_graficacion(struct GrafDat *dtgraf)
 {
     float min, max;
     char expr[100];
+    int err;
+
     if (dtgraf->tipo_gra == 'f')
     {
-        printf("Graficación de una funcion introducida por teclado:\n\n");
-        printf("\n Ingrese la funcion a graficar: ");
-        scanf("%s",expr);
+        do{
+            Menu_graficacion(1);
+            printf("\n         Ingrese la funcion a graficar: f(x)= ");
+
+            fflush(stdin);
+            scanf("%s",expr);
+
+            err=Parser_error(expr);
+        }while(err != 0);
 
         Parser_gnuplot(expr); /* Acondiciona la expresion cambiando el operador de exponenciacion */
-
         strcpy(dtgraf->funcion, expr);
-
     }
-    else
+    if (dtgraf->tipo_gra == 'p')
     {
-        printf("Graficación de datos leidos desde una archivo:\n\n");
-        strcpy(dtgraf->archivo, "datos.txt");
+        Menu_graficacion(2);
+        strcpy(dtgraf->archivo,"datos.txt");
     }
+    if (dtgraf->tipo_gra == 'a')
+    {
+        do{
+            Menu_graficacion(3);
+            printf("\n         Ingrese la funcion a graficar: f(x)= ");
 
+            fflush(stdin);
+            scanf("%s",expr);
+
+            err=Parser_error(expr);
+        }while(err != 0);
+
+        Parser_gnuplot(expr); /* Acondiciona la expresion cambiando el operador de exponenciacion */
+        strcpy(dtgraf->funcion, expr);
+        strcpy(dtgraf->archivo,"datos.txt");
+    }
     strcpy(dtgraf->titulo, "Grafica de f(x)");
     strcpy(dtgraf->ejex, "x");
     strcpy(dtgraf->ejey, "f(x)");
 
-    printf("\n Ingrese el valor minimo en x: ");
+    printf("\n         Ingrese el valor minimo en x: ");
     scanf("%f",&min);
     dtgraf->xmin=min;
-    printf("\n Ingrese el valor maximo en x: ");
+    printf("\n         Ingrese el valor maximo en x: ");
     scanf("%f",&max);
     dtgraf->xmax=max;
 
     Grafica(dtgraf);/**< Se llama a la funcion que ejecuta la graficacion con gnuplot */
-
-
 }
 
 /** \brief Funcion que transforma la cadena f de caracteres con la expresion a graficar,
@@ -160,9 +180,14 @@ void Grafica(struct GrafDat *datos)
         Parser_gnuplot(datos->funcion);
         fprintf(gnuplotPipe, "plot %s w l ls 2\n",datos->funcion);
     }
-    else if(datos->tipo_gra == 'p')
+    if(datos->tipo_gra == 'p')
     {
-        fprintf(gnuplotPipe, "plot \"%s\" w p ls 2\n",datos->archivo);
+        fprintf(gnuplotPipe, "plot \"%s\" using 1:2 w p ls 2\n",datos->archivo);
+    }
+    else
+    {
+        Parser_gnuplot(datos->funcion);
+        fprintf(gnuplotPipe, "plot %s w l ls 2, \"%s\" using 1:2\n",datos->funcion,datos->archivo);
     }
 
 /********************************************//**

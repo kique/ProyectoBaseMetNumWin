@@ -8,35 +8,34 @@
  *
  */
 
-int main()
+int main(void)
 {
-    int resp;
+    int resp = 1;
 
     do
     {
-        menu_main();
-        printf("\n\nSeleccione una opcion: ");
+        Menu_main(resp);
+        printf("\n        Seleccione una Opcion: ");
         scanf("%d",&resp);
 
         switch(resp)
         {
         case 1:
-            crea_grafica();
+            Crea_grafica();
             break;
         case 2:
-            maneja_tabulacion();
+            Maneja_tabulacion();
+            resp = 1;
             break;
         case 3:
             LeeDatos_Biseccion();
+            resp = 1;
             break;
         case 0:
-
             exit(0);
-
         default:
-            printf("\nOpcion Incorrecta!");
+            resp = -1;
         }
-
     }
     while(resp != 0);
 

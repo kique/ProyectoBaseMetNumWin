@@ -11,43 +11,35 @@
 
 void LeeDatos_Biseccion(void)
 {
-    char expre[100]; /// *expr  apuntador a la cadena que contendra la expresion matematica
-    int err;    /// err    variable que indica si ubo error en la expresion leida
-    int cifras; /// cifras Numero de cifras significatovas
-    int maxit;  /// maxit  Numero maximo de iteraciones
-    double xa;  /// xa     Valor inicial del intervalo
-    double xb;  /// xb     Valor finl del intervalo
+    char expr[300];    /// *expr  apuntador a la cadena que contendra la expresion matematica
+    int err;            /// err    variable que indica si ubo error en la expresion leida
+    int cifras;         /// cifras Numero de cifras significatovas
+    int maxit;          /// maxit  Numero maximo de iteraciones
+    double xa;          /// xa     Valor inicial del intervalo
+    double xb;          /// xb     Valor finl del intervalo
     int c,length;
 
     do{
-        system("cls");
-        printf("Localizacion de una raiz por el metodo de la Biseccion\n\n");
+        Menu_main(3);
+        printf("\n         Ingrese la ecuacion f(x)=  ");
 
-        while ((c = getchar()) != '\n' && c != EOF);
+        fflush(stdin);
+        scanf("%s",expr);
 
-        printf("\nIngrese la ecuacion f(x)= ");
-        fgets(expre,50,stdin);
-
-        length = strlen(expre);
-
-        if (length > 0 && expre[length - 1] == '\n')
-            expre[length - 1] = '\0';
-
-        err=Parser_error(expre);
-
+        err=Parser_error(expr);
     }while(err != 0);
 
 
-    printf("\nDe el numero de cifras significativas n: ");
+    printf("\n         De el numero de cifras significativas n: ");
     scanf("%d",&cifras);
-    printf("\nDe el numero maximo de iteraciones: ");
+    printf("         De el numero maximo de iteraciones: ");
     scanf("%d",&maxit);
-    printf("\nDe el valor inicial del intervalo xa: ");
+    printf("         De el valor inicial del intervalo xa: ");
     scanf("%lf",&xa);
-    printf("\nDe el valor inicial del intervalo xb: ");
+    printf("         De el valor inicial del intervalo xb: ");
     scanf("%lf",&xb);
 
-    Biseccion(expre,xa,xb,cifras,maxit);
+    Biseccion(expr,xa,xb,cifras,maxit);
 
     printf("\n\n");
     system("pause");
@@ -73,7 +65,7 @@ void Biseccion(char *f,double Xa,double Xb,int cifras,int maxit)
 
 
     if(fx(f,Xa) * fx(f,Xb) > 0.0){
-        printf("Error: Prueba con otro intervalo...");
+        printf("\n         Error: Prueba con otro intervalo...");
         err = -1;
         return -1;
     }
@@ -90,7 +82,7 @@ void Biseccion(char *f,double Xa,double Xb,int cifras,int maxit)
         Xrant = Xr;
         iter = iter + 1;
 
-        printf("\nLa raiz es: %lf en %3d iteraciones y un error = %lf",Xr,iter,Ea);
+        printf("\n         |La raiz es: %10.3lf en %3d iteraciones y un error = %10.3lf\t|",Xr,iter,Ea);
 
     }while(Ea > tol && iter < maxit);
 

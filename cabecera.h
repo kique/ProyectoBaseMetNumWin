@@ -39,14 +39,15 @@ typedef struct GrafDat{
  * Prototipos de las funciones de los menus
  */
 
-void menu_graficacion(void);
-void menu_main(void);
+void Menu_main(int m);
+void Menu_graficacion(int m);
+void Menu_mensaje(int m);
 
 /*
  * Prototipos de las funciones de graficacion
  */
-void crea_grafica(void);
-void maneja_graficacion(struct GrafDat*);
+void Crea_grafica();
+void Maneja_graficacion(struct GrafDat *dtgraf);
 void Grafica(struct GrafDat*);
 
 /*
@@ -56,8 +57,8 @@ void Grafica(struct GrafDat*);
 void Parser_gnuplot(char *g);
 double fx(char *f,double xf);
 int Parser_error(char *f);
-int tabula_funcion(double xi, double xf, double inc, char *ap_expr,int archivo);
-void maneja_tabulacion();
+int Tabula_funcion(double xi, double xf, double inc, char *ap_expr,int archivo);
+void Maneja_tabulacion();
 
 /*
  * Prototipos de las funciones de localizacion de raices

@@ -6,7 +6,6 @@
  *
  */
 
-
 double fx(char *f,double xf)
 {
     int err;
@@ -15,14 +14,11 @@ double fx(char *f,double xf)
     int num_vars=1;
 
     te_variable vars[] = {{"x", &x}}; /* Almacena nombres y apuntadores */
-
-    /* Compile the expression with variables. */
     x=xf;
     te_expr *expr = te_compile(f, vars, num_vars, &err);
 
     Fx=te_eval(expr);
     te_free(expr);
-
     return Fx;
 }
 
@@ -33,24 +29,23 @@ double fx(char *f,double xf)
  * \return 0
  *
  */
-
-int Parser_error(char *f)
+ int Parser_error(char *f)
 {
-    int err;
-    int num_vars=1;
     double x;
-    te_variable vars[] = {{"x", &x}}; /* Almacena nombres y apuntadores */
-    /* Compile the expression with variables. */
+    int num_vars=1;
+    int err;
+
+    te_variable vars[] = {{"x", &x}};
     te_expr *expr = te_compile(f, vars, num_vars, &err);
+
     if(err!=0)
     {
-        printf("\n\tError cerca de aqui:");
+        printf("\n         Error cerca de aqui:");
         printf("\n\t\t%s",f);
         printf("\n\t\t%*s^\n", err-1, "");
-        te_free(expr);
+        system("pause");
         return err;
     }
     else
-        te_free(expr);
         return 0;
 }
