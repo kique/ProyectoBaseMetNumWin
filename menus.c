@@ -48,36 +48,36 @@ void Menu_main(int m)
 void Menu_graficacion(int m)
 {
     system("cls");
-    printf("        +------------------------------------------------------------+\n");
-    printf("        |                     MENU GRAFICACION                       |\n");
-    printf("        +------------------------------------------------------------+\n");
-    printf("        |                                                            |\n");
-    printf("        | 1.- Graficar una Expresion Matematica                      |\n");
-    printf("        | 2.- Graficar datos desde un archivo                        |\n");
-    printf("        | 3.- Graficar datos de un Archivo y Expresion Mstemática    |\n");
-    printf("        |                                                            |\n");
-    printf("        | 0.- Salir                                                  |\n");
-    printf("        +------------------------------------------------------------+\n");
+    printf("        +-------------------------------------------------------------+\n");
+    printf("        |                     MENU GRAFICACION                        |\n");
+    printf("        +-------------------------------------------------------------+\n");
+    printf("        |                                                             |\n");
+    printf("        | 1.- Graficar una Expresion Matematica                       |\n");
+    printf("        | 2.- Graficar datos desde un archivo                         |\n");
+    printf("        | 3.- Graficar una Expresion Matematica y datos de un Archivo |\n");
+    printf("        |                                                             |\n");
+    printf("        | 0.- Salir                                                   |\n");
+    printf("        +-------------------------------------------------------------+\n");
 
     if(m > 4 || m < 0){
-        printf("        |          WARNING:     !!!  Opcion Incorrecta  !!!          |\n");
-        printf("        +------------------------------------------------------------+\n");
+        printf("        |          WARNING:     !!!  Opcion Incorrecta  !!!           |\n");
+        printf("        +-------------------------------------------------------------+\n");
     }
     if(m == 1){
-        printf("        |          SE EJECUTA:      Graf. Expresion Matematica       |\n");
-        printf("        +------------------------------------------------------------+\n");
+        printf("        |          SE EJECUTA:      Graf. Expresion Matematica        |\n");
+        printf("        +-------------------------------------------------------------+\n");
     }
     if(m == 2){
-        printf("        |          SE EJECUTA:             Graf. Datos               |\n");
-        printf("        +------------------------------------------------------------+\n");
+        printf("        |          SE EJECUTA:             Graf. Datos                |\n");
+        printf("        +-------------------------------------------------------------+\n");
     }
     if(m == 3){
-        printf("        |          SE EJECUTA:         Graf. Datos y Funcion         |\n");
-        printf("        +------------------------------------------------------------+\n");
+        printf("        |          SE EJECUTA:         Graf. Datos y Funcion          |\n");
+        printf("        +-------------------------------------------------------------+\n");
     }
     if(m == 4){
-        printf("        |                                                            |\n");
-        printf("        +------------------------------------------------------------+\n");
+        printf("        |                                                             |\n");
+        printf("        +-------------------------------------------------------------+\n");
     }
 
 }

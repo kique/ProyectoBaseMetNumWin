@@ -151,3 +151,41 @@
 	<stdio.h>
 	<limits.h>
 
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\analizador.c
+	"cabecera.h"
+
+1615657904 c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1615657904 c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tinyexpr.h
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\arreglos.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\grafica.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\main.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\raices.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tabula.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615658268 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\menus.c
+	"cabecera.h"
+

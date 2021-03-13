@@ -5,7 +5,6 @@
  *
  *  @author Enrique Martinez Roldan (metodos@e-roldan.net)
  *  @author Jose Antonio Sixto Berrocal(jsixto@ipn.mx)
- *
  */
 
 int main(void)
