@@ -184,7 +184,7 @@ void Grafica(struct GrafDat *datos)
     {
         fprintf(gnuplotPipe, "plot \"%s\" using 1:2 w p ls 2\n",datos->archivo);
     }
-    else
+    if
     {
         Parser_gnuplot(datos->funcion);
         fprintf(gnuplotPipe, "plot %s w l ls 2, \"%s\" using 1:2\n",datos->funcion,datos->archivo);
