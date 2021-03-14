@@ -13,7 +13,7 @@ void Maneja_tabulacion(void)
 {
     double xa,xb,inc;
     int length,c,archivo;
-    char expresion[30];
+    char expresion[100];
 
     Menu_main(2);
     while ((c = getchar()) != '\n' && c != EOF);
