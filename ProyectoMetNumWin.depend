@@ -189,3 +189,41 @@
 1615658268 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\menus.c
 	"cabecera.h"
 
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\analizador.c
+	"cabecera.h"
+
+1616492351 c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1616480316 c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tinyexpr.h
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\arreglos.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\grafica.c
+	"cabecera.h"
+
+1616489697 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\main.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\raices.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tabula.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1616491467 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\menus.c
+	"cabecera.h"
+

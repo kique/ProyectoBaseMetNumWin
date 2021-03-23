@@ -53,3 +53,4 @@ dkms.conf
 
 #Archivos de respaldo de diff
 *.bak
+README.md

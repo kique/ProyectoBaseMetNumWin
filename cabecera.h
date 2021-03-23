@@ -9,6 +9,24 @@
 #include "tinyexpr.h"
 
 /** \file cabecera.h
+ *
+ *  o     o          o  o    o                 .oPYo.
+ *  8b   d8          8  8b   8                 8   `8
+ *  8`b d'8 .oPYo.  o8P 8`b  8 o    o ooYoYo. o8YooP' .oPYo. .oPYo. .oPYo.
+ *  8 `o' 8 8oooo8   8  8 `b 8 8    8 8' 8  8  8   `b .oooo8 Yb..   8oooo8
+ *  8     8 8.       8  8  `b8 8    8 8  8  8  8    8 8    8   'Yb. 8.
+ *  8     8 `Yooo'   8  8   `8 `YooP' 8  8  8  8oooP' `YooP8 `YooP' `Yooo'
+ *
+ *  @copyright 2021 Enrique Martinez Roldan
+ *  @license   https://github.com/kique/ProyectoBaseMetNumWin/blob/main/LICENSE
+ *  @version   0.01
+ *  @link      https://github.com/kique/ProyectoBaseMetNumWin
+ *
+ *  @author Enrique Martinez Roldan (metodos@e-roldan.net)
+ *  @author Jose Antonio Sixto Berrocal(jsixto@ipn.mx)
+ *  @author Manuel Torres Sabino
+ *  @author Javier E. Aviles Nunez
+ *
  *  \brief Estructura de datos para la matrices
  */
 
@@ -42,6 +60,7 @@ typedef struct GrafDat{
 void Menu_main(int m);
 void Menu_graficacion(int m);
 void Menu_mensaje(int m);
+void Menu_creditos(void);
 
 /*
  * Prototipos de las funciones de graficacion
@@ -79,7 +98,6 @@ mat Resta_Mat(mat A,mat B);
 mat Multiplica_Mat(mat A,mat B);
 mat Copia_Mat(mat A,mat B);
 double Mat_Determinante(mat A);
-
 
 
 #endif // CABECERA_H_INCLUDED
